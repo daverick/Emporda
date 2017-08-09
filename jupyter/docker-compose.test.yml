@@ -1,0 +1,11 @@
+version: '3'
+services:
+  jupyter:
+    build: .
+    ports:
+    - "8888"
+  sut:
+    image: alpine:latest
+    command: wget -q http://jupyter:8888 -O /dev/null
+    depends_on:
+      - jupyter
