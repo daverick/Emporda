@@ -1,0 +1,5 @@
+-- green
+jupyter
+ipywidgets
+pandas
+google-api-python-client
