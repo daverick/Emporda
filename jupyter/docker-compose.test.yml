@@ -6,6 +6,6 @@ services:
     - "8888"
   sut:
     image: alpine
-    command: sh -c " sleep 1; wget --spider -q http://jupyter:8888 -O /dev/null"
+    command: sh -c " sleep 5; wget --spider -q http://jupyter:8888 -O /dev/null"
     links:
       - jupyter
