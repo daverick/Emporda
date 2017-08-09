@@ -1,4 +1,4 @@
-Docker file for a jupyter server with: python3 bash and scala notebooks
+A jupyter server with: python3 bash and scala notebooks
 
 to use it:
 1. go to your notebooks folder
@@ -6,3 +6,5 @@ to use it:
 3. use the url that appears in the logs to connect to your jupyter notebooks. 
 ![logs](doc/images/jupyter%20server%20log%20with%20url.png)
 4. CTRL-C to stop the jupyter server. your notebooks will be kept in your notebook folder
+
+[Source on github](https://github.com/daverick/emporda/tree/master/jupyter)
