@@ -5,7 +5,7 @@ services:
     expose:
     - "8888"
   sut:
-    image: alpine:latest
-    command: wget -q http://jupyter:8888 -O /dev/null
+    image: alpine
+    command: sh -c " sleep 1; wget --spider -q http://jupyter:8888 -O /dev/null"
     links:
       - jupyter
