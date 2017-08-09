@@ -7,5 +7,5 @@ services:
   sut:
     image: alpine:latest
     command: wget -q http://jupyter:8888 -O /dev/null
-    depends_on:
+    links:
       - jupyter
