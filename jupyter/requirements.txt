@@ -3,3 +3,6 @@ jupyter
 ipywidgets
 pandas
 google-api-python-client
+SQLAlchemy
+Tweepy
+rx
