@@ -7,6 +7,14 @@ RUN mkdir -p /awscli
 VOLUME /awscli
 WORKDIR /awscli
 
+#installing nodejs
+RUN curl -sL https://deb.nodesource.com/setup_6.x | bash && \
+    apt-get install -y --no-install-recommends nodejs
+
+
+#installing serverless framework
+RUN npm install -g serverless
+
 COPY requirements.txt /tmp
 RUN pip install --no-cache-dir -r /tmp/requirements.txt
 
