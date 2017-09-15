@@ -12,8 +12,7 @@ alias aws='docker run -it --rm  -v aws-config:/home/aws -v "`pwd`":/awscli daver
 
 to use serverless it:
 ```bash
-docker run -it --rm  -v aws-config:/home/aws -v "`pwd`":/awscli --entrypoint=serv
-erless daverick/awscli --version
+docker run -it --rm  -v aws-config:/home/aws -v "`pwd`":/awscli --entrypoint=serverless daverick/awscli --version
 ```
 you can create an alias too (bash)
 ```bash
