@@ -1,4 +1,4 @@
-node and npm commands available from a docker container 
+node and npm commands available from a docker container
 
 # npm:
 1. execute
@@ -19,4 +19,11 @@ docker run --rm  -v "`pwd`":/usr/src/app daverick/node node
 ```
 alias node='docker run --rm  -v "`pwd`":/usr/src/app daverick/node node'
 ```
+
+#node version 6
+There is a tag for version 6 of node:
+```
+daverick/node:6
+```
+
 [Source on github](https://github.com/daverick/emporda)
