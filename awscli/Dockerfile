@@ -10,6 +10,9 @@ WORKDIR /awscli
 COPY requirements.txt /tmp
 RUN pip install --no-cache-dir -r /tmp/requirements.txt
 
+RUN apt-get update && apt-get install -y --no-install-recommends \
+  groff 
+
 USER aws
 
 ENTRYPOINT ["aws"]
