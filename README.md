@@ -1,2 +1,2 @@
 # Emporda
-docker files and commands so that I don't install anything on my Mac
+docker files and/or docker run commands so that I don't have to install it on my mac and mess it up.
