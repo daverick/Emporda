@@ -2,4 +2,4 @@ version: '3'
 services:
   sut:
     build: .
-    command: sh -c " python --version  | grep ' 3\.' "
+    command: sh -c " pylint --version  | grep pylint "
