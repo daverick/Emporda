@@ -1,5 +1,5 @@
-pylint for python3 docker image
-works for file or module that are in pwd or below
+pylint docker image
+works for files or modules that are in the ciurrent working directory or below
 
 to use iteractively:
 ```bash
