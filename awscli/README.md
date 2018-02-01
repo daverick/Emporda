@@ -1,16 +1,16 @@
 Amazon Web Services CLI with the awscli configuration in a docker volume.
-with the serverless framework installed
+( the serverless framework is available on a tagged docker image)
 
-to use awscli it:
+to use only awscli :
 ```bash
-docker run -it --rm  -v aws-config:/home/aws -v "`pwd`":/awscli daverick/awscli:serverless --version
+docker run -it --rm  -v aws-config:/home/aws -v "`pwd`":/awscli daverick/awscli --version
 ```
 you can create an alias too (bash)
 ```bash
-alias aws='docker run -it --rm  -v aws-config:/home/aws -v "`pwd`":/awscli daverick/awscli:serverless'
+alias aws='docker run -it --rm  -v aws-config:/home/aws -v "`pwd`":/awscli daverick/awscli'
 ```
 
-to use serverless it:
+to use serverless:
 ```bash
 docker run -it --rm  -v aws-config:/home/aws -v "`pwd`":/awscli --entrypoint=serverless daverick/awscli:serverless --version
 ```
