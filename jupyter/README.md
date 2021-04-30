@@ -1,4 +1,4 @@
-## A jupyter server with: python3 bash notebooks to be used on local machine on a trusted local network
+## A jupyter server with: python3 bash ~~and scala~~ notebooks to be use on local machine on a trusted local network
 
 to use it:
 1. go to your notebooks folder

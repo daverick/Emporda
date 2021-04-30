@@ -5,3 +5,7 @@ pandas
 google-api-python-client
 kubernetes
 jupyterlab
+matplotlib
+numpy
+scipy
+jupyter_http_over_ws
