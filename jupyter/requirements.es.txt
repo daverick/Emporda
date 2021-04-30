@@ -1,0 +1,11 @@
+-- green
+jupyter
+ipywidgets
+pandas
+ipython-elasticsearch
+jupyterlab
+elasticsearch
+elastic-app-search
+eland
+altair
+numpy

@@ -1,4 +1,4 @@
-## A jupyter server with: python3 bash and scala notebooks to be use on local machine on a trusted local network
+## A jupyter server with: python3 bash and scala notebooks to be used on local machine on a trusted local network
 
 to use it:
 1. go to your notebooks folder
@@ -14,4 +14,10 @@ docker run -it --rm -p 8888:8888 -v "`pwd`":/usr/src/app -d --name=jupyter daver
 ## jupyter:gcloud
 ```bash
 docker run -it --rm -p 8888:8888 -v "`pwd`":/usr/src/app -d --volumes-from gcloud-config --name=jupyter daverick/jupyter:gcloud
+```
+
+
+## jupyter:es
+```bash
+docker run -it --rm -p 8888:8888 -v "`pwd`":/usr/src/app -d  --name=jupyter daverick/jupyter:es
 ```

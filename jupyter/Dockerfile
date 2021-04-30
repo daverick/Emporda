@@ -6,15 +6,6 @@ ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
 RUN chmod +x /tini
 ENTRYPOINT ["/tini","--"]
 
-#installing java 8 jre
-RUN echo "deb http://deb.debian.org/debian jessie-backports main" | tee --append /etc/apt/sources.list.d/jessie-backports.list > /dev/null &&\
-      apt-get update  && apt-get install -y --no-install-recommends -t jessie-backports openjdk-8-jre
-
-#installing jupyter-scala
-RUN cd /tmp &&\
-      wget https://raw.githubusercontent.com/alexarchambault/jupyter-scala/master/jupyter-scala && \
-      /bin/bash jupyter-scala
-
 #installing bash_kernel
 RUN pip3 install bash_kernel
 
@@ -22,12 +13,9 @@ RUN pip3 install bash_kernel
 COPY requirements.txt /tmp
 RUN pip install --no-cache-dir -r /tmp/requirements.txt
 
-
-
 #activating the kernels and extensions
 RUN jupyter nbextension enable --py --sys-prefix widgetsnbextension
 RUN python -m bash_kernel.install
-
 
 #folder for mounting the notebooks folder
 RUN mkdir -p /usr/src/app
@@ -37,4 +25,4 @@ WORKDIR /usr/src/app
 
 EXPOSE 8888
 
-CMD ["jupyter","notebook","--ip=*","--NotebookApp.token=''","--allow-root"]
+CMD ["jupyter","lab","--ip=0.0.0.0","--allow-root"]

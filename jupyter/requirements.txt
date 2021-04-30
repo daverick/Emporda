@@ -4,3 +4,4 @@ ipywidgets
 pandas
 google-api-python-client
 kubernetes
+jupyterlab
